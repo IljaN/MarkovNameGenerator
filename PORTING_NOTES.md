@@ -4,8 +4,6 @@
 
 Successfully ported the Markov Name Generator library from Haxe to modern C# (.NET 8).
 
-**Location**: `/home/ilja/code/MarkovNameGenerator/csharp/`
-
 ## What Was Ported
 
 ### Core Library Classes (MarkovNameGenerator/)
