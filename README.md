@@ -1,6 +1,6 @@
 # Markov Name Generator
 
-A C#/.NET 10 Port of [markov-namgen-lib](https://github.com/Tw1ddle/markov-namegen-lib) originally written in Haxe by [samcodes](https://lib.haxe.org/u/samcodes). The
+A C#/.NET 10 Port of [markov-namgen-lib](https://github.com/Tw1ddle/markov-namegen-lib) originally written in Haxe by [Sam Twidale](https://samcodes.co.uk/). The
 port was created using AI.
 
 This library generates procedural names and words using Markov chains with Katz's back-off model and Dirichlet prior smoothing.
