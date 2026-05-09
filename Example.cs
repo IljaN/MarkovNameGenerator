@@ -125,10 +125,10 @@ if (File.Exists(dataPath))
         .Where(line => !string.IsNullOrWhiteSpace(line))
         .ToList();
 
-    var humanNameGenerator = new NameGenerator(germanForeNames, order: 3, prior: 0.01);
+    var humanNameGenerator = new NameGenerator(germanForeNames, order: 3, prior: 0.0, backoff: false);
 
     Console.WriteLine("Generating german fore names:");
-    var humanNames = humanNameGenerator.GenerateNames(n: 10, minLength: 8, maxLength: 12);
+    var humanNames = humanNameGenerator.GenerateNames(n: 10, minLength: 5, maxLength: 11);
 
     foreach (var name in humanNames)
     {
