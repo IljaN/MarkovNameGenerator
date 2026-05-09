@@ -26,7 +26,6 @@ dotnet run Example.cs
 ### Building from Source
 
 ```bash
-cd csharp
 dotnet build
 ```
 
