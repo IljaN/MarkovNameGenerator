@@ -115,4 +115,30 @@ foreach (var name in techResults)
     Console.WriteLine($"  • {name}");
 }
 
+
+// Example 6: Human names from training file
+Console.WriteLine("\n=== Example 6: Human German fore names from Training Data ===\n");
+
+if (File.Exists(dataPath))
+{
+    var germanForeNames = File.ReadAllLines(Path.Combine("data", "german_forenames.txt"))
+        .Where(line => !string.IsNullOrWhiteSpace(line))
+        .ToList();
+
+    var humanNameGenerator = new NameGenerator(germanForeNames, order: 3, prior: 0.01);
+
+    Console.WriteLine("Generating german fore names:");
+    var humanNames = humanNameGenerator.GenerateNames(n: 10, minLength: 8, maxLength: 12);
+
+    foreach (var name in humanNames)
+    {
+        Console.WriteLine($"  • {name}");
+    }
+}
+else
+{
+    Console.WriteLine($"Training data file not found: {dataPath}");
+    Console.WriteLine("Place training data files in the data/ directory to use this example.");
+}
+
 Console.WriteLine("\n=== Done! ===");
